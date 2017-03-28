@@ -62,7 +62,7 @@
 
 ```
     // 6.加毛玻璃
-    
+
     // 6.1 创建UIToolBar对象
     UIToolbar *toolBar = [[UIToolbar alloc] init];
     // 6.2 设置toolBar的frame
@@ -72,6 +72,25 @@
     toolBar.alpha = 0.01;
     // 6.4 加到imageView中
     [imageView addSubview:toolBar];
+```
+
+### 图片加载的两种方式
+
+> #### 1.imageNamed
+>
+> #### 2.imageWithContentOfFile:
+
+```
+   1. 加载Assets.xcassets这里面的图片:
+    1> 打包后变成Assets.car
+    2> 拿不到路径
+    3> 只能通过imageNamed:来加载图片
+    4> 不能通过imageWithContentsOfFile:来加载图片
+ 
+   2. 放到项目中的图片:
+    1> 可以拿到路径
+    2> 能通过imageNamed:来加载图片
+    3> 也能通过imageWithContentsOfFile:来加载图片
 ```
 
 
