@@ -78,7 +78,19 @@
 
 > #### 1.imageNamed
 >
+> a. 就算指向它的指针被销毁,该资源也不会被从内存中干掉
+>
+> b. 放到Assets.xcassets的图片,默认就有缓存
+>
+> c. 图片经常被使用
+>
 > #### 2.imageWithContentOfFile:
+>
+> a. 指向它的指针被销毁,该资源会被从内存中干掉
+>
+> b. 放到项目中的图片就不由缓存
+>
+> c. 不经常用,大批量的图片
 
 ```
    1. 加载Assets.xcassets这里面的图片:
@@ -86,7 +98,7 @@
     2> 拿不到路径
     3> 只能通过imageNamed:来加载图片
     4> 不能通过imageWithContentsOfFile:来加载图片
- 
+
    2. 放到项目中的图片:
     1> 可以拿到路径
     2> 能通过imageNamed:来加载图片
