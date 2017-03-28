@@ -105,5 +105,20 @@
     3> 也能通过imageWithContentsOfFile:来加载图片
 ```
 
+### 音乐播放器
+
+> #### 不要忘记导入&lt;AVFoundation/AVFoundation.h&gt;的头文件
+
+```
+    // 资源的URL地址
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mySong1.mp3" withExtension:nil];
+    // 创建播放器曲目
+    AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:url];
+    // 创建播放器
+    self.player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+    // 播放
+    [self.player play];
+```
+
 
 
